@@ -22,7 +22,8 @@ var emojiDictionary = {
   "☝": " Index Pointing Up ",
   "👍": " Thumbs up ",
   "✊": " Raised Fist ",
-  "👊": " Oncoming Fist  "
+  "👊": " Oncoming Fist  ",
+  "😍": " Smiling face with heart eyes  "
 };
 
 export default function App() {
