@@ -214,7 +214,7 @@ export default function App() {
     }
     setMeaning(meaning);
   }
-  return (
+  return ( 
     <div className="App">
       <h1> welcome to emoji interpreter</h1>
       <input
