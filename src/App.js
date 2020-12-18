@@ -41,7 +41,10 @@ export default function App() {
   return (
     <div className="App">
       <h1> welcome to emoji interpreter</h1>
-      <input onChange={emojiChangeHandler}></input>
+      <input
+        placeholder="enter an emoji to know its meaning . please enter one emoji at a time"
+        onChange={emojiChangeHandler}
+      ></input>
       <div id="message"> {meaning}</div>
     </div>
   );
