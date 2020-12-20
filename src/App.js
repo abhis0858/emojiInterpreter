@@ -205,6 +205,10 @@ var emojiDictionary = {
 var emojiInDatabase = Object.keys(emojiDictionary);
 
 export default function App() {
+  function clickHandler(emojis) {
+    var meaning = emojiDictionary[emojis];
+    setMeaning(meaning);
+  }
   const [meaning, setMeaning] = useState();
   function emojiChangeHandler(event) {
     var userInput = event.target.value;
@@ -228,10 +232,12 @@ export default function App() {
       {emojiInDatabase.map(function (emojis) {
         return (
           <span
+            onClick={() => clickHandler(emojis)}
             style={{
               fontSize: "larger",
               padding: "0.2rem 0.2rem",
-              maxWidth: "200px"
+              maxWidth: "200px",
+              cursor: "pointer"
             }}
             key={emojis}
           >
