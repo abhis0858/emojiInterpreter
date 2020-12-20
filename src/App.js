@@ -202,6 +202,8 @@ var emojiDictionary = {
   "🩸": "Drop of Blood"
 };
 
+var emojiInDatabase = Object.keys(emojiDictionary);
+
 export default function App() {
   const [meaning, setMeaning] = useState();
   function emojiChangeHandler(event) {
@@ -214,7 +216,7 @@ export default function App() {
     }
     setMeaning(meaning);
   }
-  return ( 
+  return (
     <div className="App">
       <h1> welcome to emoji interpreter</h1>
       <input
@@ -222,6 +224,22 @@ export default function App() {
         onChange={emojiChangeHandler}
       ></input>
       <div id="message"> {meaning}</div>
+      <h3> Emojis in database </h3>
+      {emojiInDatabase.map(function (emojis) {
+        return (
+          <span
+            style={{
+              fontSize: "larger",
+              padding: "0.2rem 0.2rem",
+              maxWidth: "200px"
+            }}
+            key={emojis}
+          >
+            {" "}
+            {emojis}{" "}
+          </span>
+        );
+      })}
     </div>
   );
 }
